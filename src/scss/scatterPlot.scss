@@ -1,0 +1,53 @@
+
+#scatterPlotPage{
+
+    
+    #svg-container{
+        min-width: 600px;
+        min-height: 500px;
+        background-color: white;
+        box-shadow: 3px 3px 6px black;
+        position:relative;
+    }
+    
+    #title{
+        font-size: 2em;
+    }
+    
+    .dot{
+        stroke-width: 2;
+        stroke: black;
+        opacity: 0.9;
+    }
+    
+    .doping{
+        fill: palevioletred;
+    }
+    
+    .noDoping{
+        fill: blue;
+        
+    }
+    
+    #tooltip{
+        background-color: lightsalmon;
+        position: absolute;
+        padding: 7px;
+        border-radius: 5px;
+        border: 2px solid black;
+    }
+    
+    .notVisible{
+        opacity: 0;
+        max-width: 0px;
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    .visible{
+        opacity: 1;
+        max-width: 300px;
+        height: auto;
+        overflow: visible;
+    }
+}

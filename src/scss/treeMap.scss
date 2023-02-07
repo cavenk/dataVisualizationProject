@@ -1,0 +1,28 @@
+#treeMap{
+
+    #svg-container{
+        background-color: white;
+        box-shadow: 3px 3px 6px black;
+        position:relative;
+    }
+    
+    #tooltip{
+        position: absolute;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: aqua;
+        z-index: 500;
+    }
+
+    .visible{
+        opacity: 1;
+        width: auto;
+        height: auto;
+    }
+
+    .notVisible{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}

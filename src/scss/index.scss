@@ -1,0 +1,38 @@
+
+#barChartPage{
+    
+    #svg-container{
+        position: relative;
+    }
+    
+    #graphic{
+        background-color: white;
+        border: 1px solid black;
+    }
+    
+    #tooltip{
+        background-color: lightsteelblue;
+        width: 150px;
+        padding: 10px;
+        box-shadow: 2px 2px grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        left: 10%;
+        position: absolute;
+        top: 50%;
+        font-size: 1.2em;
+        transition: opacity 500ms;
+    
+    }
+
+    .bar{
+        fill: rgb(20, 122, 156);
+        
+        &:hover{
+            fill: white;
+        }
+    }
+}

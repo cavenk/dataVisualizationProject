@@ -1,0 +1,56 @@
+
+#heatMapPage{
+    #svg-container{
+        // min-width: 600px;
+        // min-height: 500px;
+        overflow-x: scroll;
+        background-color: white;
+        box-shadow: 3px 3px 6px black;
+        position:relative;
+    }
+
+    #tooltip{
+        position: absolute;
+        background-color: black;
+        color: white;
+        border-radius: 15px;
+        max-width: 300px;
+        padding: 10px;
+        top: 0;
+    }
+    
+    .notVisible{
+        opacity: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .visible{
+        opacity: 1;
+        width: auto;
+        height: auto;
+        overflow: visible;
+    }
+    
+    
+    .one{
+        fill: greenyellow;
+    }
+    
+    .two{
+        fill: royalblue;
+    }
+    
+    .three{
+        fill: lightpink;
+    }
+    
+    .four{
+        fill: springgreen;
+    }
+    
+    .cell:hover{
+        fill: black;
+    }
+}

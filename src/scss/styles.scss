@@ -1,0 +1,12 @@
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+@import "index.scss";
+@import "scatterPlot.scss";
+@import "heatMap.scss";
+@import "treeMap.scss";
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

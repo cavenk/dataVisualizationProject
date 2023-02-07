@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 visualization</title>
+    <link rel="stylesheet" href="scss/styles.scss">
+    <script src="javascript/scatterPlot.js" type="module"></script>
+</head>
+<body class="container-fluid">
+    <div class="row">
+        <h1 class="bg-warning p-2 text-center">Data visualization projects</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8 list-group list-group-horizontal">
+            <a href="index.html" class="list-group-item list-group-item-action">Bar chart</a>
+            <a href="scatterPlot.html" class="list-group-item list-group-item-action active">Scatterplot Graph</a>
+            <a href="heatMap.html" class="list-group-item list-group-item-action">Heat Map</a>
+            <a href="treeMap.html" class="list-group-item list-group-item-action">Treemap</a>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col">
+            <main id="scatterPlotPage">
+                <h2 id="title">Doping in professional bicycle racing</h2>
+                <p>
+                    This is a scatterplot graph that shows all the doping allegations from 1994 to 2015. 
+                    <br>
+                    <b>
+                        Hover on the graph to view more information.
+                    </b>
+                </p>
+                <div id="svg-container">
+                    <div id="tooltip" class="notVisible"></div>
+                    <svg></svg>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
