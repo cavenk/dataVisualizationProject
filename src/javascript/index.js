@@ -1,5 +1,6 @@
+import * as lib from "d3"
 
-
+console.log(lib)
 document.addEventListener("DOMContentLoaded", ()=>{
     
     fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json")
@@ -18,9 +19,9 @@ function showData(data){
 
 
     //Get min and max from data
-    const minDate = d3.min(data, (d)=> new Date(d[0]))
-    const maxDate = d3.max(data, (d)=> new Date(d[0]))
-    const maxY = d3.max(data, (d)=> d[1])
+    const minDate = lib.min(data, (d)=> new Date(d[0]))
+    const maxDate = lib.max(data, (d)=> new Date(d[0]))
+    const maxY = lib.max(data, (d)=> d[1])
 
 
     /**
@@ -28,31 +29,31 @@ function showData(data){
      * Create time scale for bottom axis
      * create height scale for heigth of data
      */
-    const xScale = d3.scaleLinear()
+    const xScale = lib.scaleLinear()
         .domain([0, data.length])
         .range([padding, w - padding])
 
-    const yScale = d3.scaleLinear()
+    const yScale = lib.scaleLinear()
         .domain([0, maxY])
         .range([h - padding, padding])
 
-    const timeScale = d3.scaleTime()
+    const timeScale = lib.scaleTime()
         .domain([minDate, maxDate])
         .range([padding, w - padding])
 
-    const heightScale = d3.scaleLinear()
+    const heightScale = lib.scaleLinear()
             .domain([0, maxY])
             .range([0, h - padding * 2])
 
     
     //Select SVG element
-    const graphic = d3.select("#graphic")
+    const graphic = lib.select("#graphic")
         .attr("width", w)
         .attr("height", h)
 
 
     //Select tooltip to show data
-    const tooltip = d3.select("#tooltip")
+    const tooltip = lib.select("#tooltip")
 
 
     //Create RECT element in the SVG and append data
@@ -87,8 +88,8 @@ function showData(data){
      * Create bottom and left axis
      * Append axis to the graph
      */
-    const axisBottom = d3.axisBottom(timeScale)
-    const axisLeft = d3.axisLeft(yScale)
+    const axisBottom = lib.axisBottom(timeScale)
+    const axisLeft = lib.axisLeft(yScale)
     
     graphic.append("g")
         .attr("transform", `translate(0, ${h - padding})`)
