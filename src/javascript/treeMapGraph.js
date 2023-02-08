@@ -1,4 +1,4 @@
-import * as d3 from "d3"
+// import * as d3 from "d3"
 
 const url = "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/video-game-sales-data.json"
 
